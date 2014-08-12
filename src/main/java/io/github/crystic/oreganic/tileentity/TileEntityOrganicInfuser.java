@@ -16,7 +16,7 @@ public class TileEntityOrganicInfuser extends TileEntity implements ISidedInvent
 	
 	private ItemStack slots[];
 	public int dualPower;
-	public static int dualCookTime;
+	public int dualCookTime;
 	public static final int maxPower = 2080;
 	public static final int infusionSpeed = 200;
 	private String customName;
@@ -229,7 +229,7 @@ public class TileEntityOrganicInfuser extends TileEntity implements ISidedInvent
 		return dualPower > 0;
 	}
 	
-	public static boolean isInfusing() {
+	public boolean isInfusing() {
 		return dualCookTime > 0;
 	}
 	
