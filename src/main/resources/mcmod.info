@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "Oreganic",
+  "name": "Oreganic",
+  "description": "Adds a way to grow ores and obtain normal ores through a process.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "http://crystic.github.io/oreganic.html",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Chris 'Crystic' Edwicker"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

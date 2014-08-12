@@ -12,7 +12,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
-@SuppressWarnings("static-access")
 public class TileEntityOrganicInfuser extends TileEntity implements ISidedInventory{
 	
 	private ItemStack slots[];

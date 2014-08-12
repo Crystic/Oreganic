@@ -11,13 +11,14 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-@SuppressWarnings("static-access")
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.tileentity.TileEntityFurnace;
+
 public class ContainerOrganicInfuser extends Container {
 
 	private TileEntityOrganicInfuser infuser;
 	private int dualCookTime;
 	private int dualPower;
-	@SuppressWarnings("unused")
 	private int lastItemBurnTime;
 	
 	public ContainerOrganicInfuser(InventoryPlayer invPlayer, TileEntityOrganicInfuser teOrganicInfuser) {
@@ -41,7 +42,6 @@ public class ContainerOrganicInfuser extends Container {
 			this.addSlotToContainer(new Slot(invPlayer, i, 8 + i * 18, 142));
 		}		
 	}
-	
 	
 	public void addCraftingCrafters(ICrafting crafting) {
 		super.addCraftingToCrafters(crafting);

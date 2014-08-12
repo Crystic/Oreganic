@@ -44,9 +44,9 @@ public class OrganicInfuser extends BlockContainer{
 
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
-	    this.blockIcon = iconRegister.registerIcon(Oreganic.modid + ":" + "OrganicInfuserSide");
-	    this.iconFront = iconRegister.registerIcon(Oreganic.modid + ":" + (this.isActive ? "OrganicInfuserFrontOn" : "OrganicInfuserFrontOff"));
-	    this.iconTopBottom = iconRegister.registerIcon(Oreganic.modid + ":" + "OrganicInfuserTopBottom");
+		this.iconFront = iconRegister.registerIcon(Oreganic.modid + ":" + (this.isActive ? "OrganicInfuserFrontOn" : "OrganicInfuserFrontOff"));
+		this.blockIcon = iconRegister.registerIcon(Oreganic.modid + ":" + "OrganicInfuserSide");
+		this.iconTopBottom = iconRegister.registerIcon(Oreganic.modid + ":" + "OrganicInfuserTopBottom");
 	}
 	
 	@SideOnly(Side.CLIENT)

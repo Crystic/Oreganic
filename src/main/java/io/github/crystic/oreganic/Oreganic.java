@@ -24,6 +24,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -147,15 +148,18 @@ public class Oreganic {
 	}
 	
 	@EventHandler
-	public void PreInit(FMLInitializationEvent initEvent) {
+	public void Init(FMLInitializationEvent initEvent) {
 		
 		GameRegistry.registerTileEntity(TileEntityOrganicInfuser.class, "OrganicInfuser");
 		GameRegistry.registerTileEntity(TileEntityMineralExtractor.class, "MineralExtractor");
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+		
+		GameRegistry.addShapedRecipe(new ItemStack(blockOrganicInfuserIdle), new Object[]{"BBB", "GFG", "SSS", 'B', Blocks.stone, 'G', Blocks.glass_pane, 'F', Blocks.furnace, 'S', Blocks.stone_slab});
+		GameRegistry.addShapedRecipe(new ItemStack(blockMineralExtractorIdle), new Object[]{"BGB", "BIB", "SSS", 'B', Blocks.stone, 'G', Blocks.glass_pane, 'I', Blocks.iron_block, 'S', Blocks.stone_slab});
 	}
 	
 	@EventHandler
-	public void PreInit(FMLPostInitializationEvent postEvent) {
+	public void PostInit(FMLPostInitializationEvent postEvent) {
 		
 	}
 
