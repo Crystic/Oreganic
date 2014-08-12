@@ -1,0 +1,24 @@
+itemGroup.OreGanic=Oreganic
+
+tile.OrganicInfuserIdle.name=Organic Infuser
+tile.OrganicInfuserActive.name=Organic Infuser
+tile.MineralExtractorIdle.name=Mineral Extractor
+tile.MineralExtractorActive.name=Mineral Extractor
+
+tile.OrganicCoal.name=Organic Coal Ore
+tile.OrganicIron.name=Organic Iron Ore
+tile.OrganicGold.name=Organic Gold Ore
+tile.OrganicLapis.name=Organic Lapis Ore
+tile.OrganicRedstone.name=Organic Redstone Ore
+tile.OrganicDiamond.name=Organic Diamond Ore
+tile.OrganicEmerald.name=Organic Emerald Ore
+
+item.CoalSeeds.name=Coal Seeds
+item.IronSeeds.name=Iron Seeds
+item.GoldSeeds.name=Gold Seeds
+item.LapisSeeds.name=Lapis Seeds
+item.RedstoneSeeds.name=Redstone Seeds
+item.DiamondSeeds.name=Diamond Seeds
+item.EmeraldSeeds.name=Emerald Seeds
+
+container.organicInfuser=Organic Infuser
