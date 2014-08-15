@@ -12,6 +12,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 
+@SuppressWarnings("static-access")
 public class TileEntityOrganicInfuser extends TileEntity implements ISidedInventory{
 	
 	private ItemStack slots[];
@@ -122,8 +123,8 @@ public class TileEntityOrganicInfuser extends TileEntity implements ISidedInvent
 			return 0;
 		} else {
 			Item item = itemstack.getItem();
-			if(item == Items.lava_bucket) return 204;  // 2 to cool 1 item
-			else if(item == Items.blaze_powder) return 32; // 6 to cook 1 item
+			if(item == Items.lava_bucket) return 204;
+			else if(item == Items.blaze_powder) return 32; 
 			else return 0;
 		}
 	}

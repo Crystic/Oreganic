@@ -11,14 +11,13 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
-import net.minecraft.tileentity.TileEntityFurnace;
 
 public class ContainerOrganicInfuser extends Container {
 
 	private TileEntityOrganicInfuser infuser;
 	private int dualCookTime;
 	private int dualPower;
+	@SuppressWarnings("unused")
 	private int lastItemBurnTime;
 	
 	public ContainerOrganicInfuser(InventoryPlayer invPlayer, TileEntityOrganicInfuser teOrganicInfuser) {

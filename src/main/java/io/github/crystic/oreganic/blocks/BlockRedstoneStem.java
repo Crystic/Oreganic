@@ -190,9 +190,9 @@ public class BlockRedstoneStem extends BlockStem
         return l < 7 ? -1 : (p_149873_1_.getBlock(p_149873_2_ - 1, p_149873_3_, p_149873_4_) == this.block ? 0 : (p_149873_1_.getBlock(p_149873_2_ + 1, p_149873_3_, p_149873_4_) == this.block ? 1 : (p_149873_1_.getBlock(p_149873_2_, p_149873_3_, p_149873_4_ - 1) == this.block ? 2 : (p_149873_1_.getBlock(p_149873_2_, p_149873_3_, p_149873_4_ + 1) == this.block ? 3 : -1))));
     }
 
-    public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+    public Item getItemDropped(int meta, Random random, int fortune)
     {
-        return null;
+        return Oreganic.cropRedstoneSeeds;
     }
 
     public int quantityDropped(Random random)

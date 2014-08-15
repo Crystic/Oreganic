@@ -7,9 +7,6 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
@@ -24,6 +21,7 @@ public class OrganicDiamond extends Block
         this.setStepSound(soundTypeStone);
         this.setHardness(3.0F);
         this.setResistance(5.0F);
+        this.setHarvestLevel("pickaxe", 2);
     }
 
     @SideOnly(Side.CLIENT)
