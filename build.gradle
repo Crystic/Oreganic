@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "MC1.7.10 - R1.0"
+version = "MC1.7.10 - R1.1"
 group= "io.github.crystic.oreganic" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Oreganic"
 

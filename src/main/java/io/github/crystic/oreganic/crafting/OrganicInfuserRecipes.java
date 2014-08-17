@@ -26,6 +26,7 @@ public class OrganicInfuserRecipes {
 		else if(item == Items.melon_seeds && item2 == Item.getItemFromBlock(Blocks.redstone_ore)) return new ItemStack (Oreganic.cropRedstoneSeeds);
 		else if(item == Items.melon_seeds && item2 == Item.getItemFromBlock(Blocks.diamond_ore)) return new ItemStack (Oreganic.cropDiamondSeeds);
 		else if(item == Items.melon_seeds && item2 == Item.getItemFromBlock(Blocks.emerald_ore)) return new ItemStack (Oreganic.cropEmeraldSeeds);
+		else if(item == Items.melon_seeds && item2 == Item.getItemFromBlock(Blocks.quartz_ore)) return new ItemStack (Oreganic.cropQuartzSeeds);
 		
 		else if(item == Items.pumpkin_seeds && item2 == Item.getItemFromBlock(Blocks.coal_ore)) return new ItemStack (Oreganic.cropCoalSeeds);
 		else if(item == Items.pumpkin_seeds && item2 == Item.getItemFromBlock(Blocks.iron_ore)) return new ItemStack (Oreganic.cropIronSeeds);
@@ -34,6 +35,7 @@ public class OrganicInfuserRecipes {
 		else if(item == Items.pumpkin_seeds && item2 == Item.getItemFromBlock(Blocks.redstone_ore)) return new ItemStack (Oreganic.cropRedstoneSeeds);
 		else if(item == Items.pumpkin_seeds && item2 == Item.getItemFromBlock(Blocks.diamond_ore)) return new ItemStack (Oreganic.cropDiamondSeeds);
 		else if(item == Items.pumpkin_seeds && item2 == Item.getItemFromBlock(Blocks.emerald_ore)) return new ItemStack (Oreganic.cropEmeraldSeeds);
+		else if(item == Items.pumpkin_seeds && item2 == Item.getItemFromBlock(Blocks.quartz_ore)) return new ItemStack (Oreganic.cropQuartzSeeds);
 		
 		return null;
 	}

@@ -38,7 +38,7 @@ public class TileEntityMineralExtractor extends TileEntity implements
 
 	public String getInventoryName() {
 		return this.hasCustomInventoryName() ? this.localizedName
-				: "container.rainbowExtractor";
+				: "container.mineralExtractor";
 	}
 
 	public boolean hasCustomInventoryName() {
@@ -146,6 +146,7 @@ public class TileEntityMineralExtractor extends TileEntity implements
 				if(block == Oreganic.cropOrganicRedstone) return 1;
 				if(block == Oreganic.cropOrganicDiamond) return 1;
 				if(block == Oreganic.cropOrganicEmerald) return 1;
+				if(block == Oreganic.cropOrganicQuartz) return 1;
 			}
 		}
 		return GameRegistry.getFuelValue(itemstack);
@@ -160,10 +161,10 @@ public class TileEntityMineralExtractor extends TileEntity implements
 			if (item instanceof ItemBlock
 					&& Block.getBlockFromItem(item) != Blocks.air) {
 				Block block = Block.getBlockFromItem(item);
-					if(block == Blocks.gravel) return 800;
+					if(block == Blocks.gravel) return 200;
 			}
 
-			if(item == Items.flint) return 1600;
+			if(item == Items.flint) return 400;
 		}
 		return GameRegistry.getFuelValue(itemstack);
 	}

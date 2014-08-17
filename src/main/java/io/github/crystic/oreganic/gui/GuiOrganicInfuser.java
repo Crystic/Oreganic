@@ -25,7 +25,7 @@ public class GuiOrganicInfuser extends GuiContainer {
 	}
 	
 	protected void drawGuiContainerForegroundLayer(int i, int j) {
-		String name = this.organicInfuser.hasCustomInventoryName() ? this.organicInfuser.getInventoryName() : I18n.format(this.organicInfuser.getInventoryName());
+		String name = "Organic Infuser";
 		
 		this.fontRendererObj.drawString(name, this.xSize / 2 - this.fontRendererObj.getStringWidth(name) / 2, 4, 4210752);
 		this.fontRendererObj.drawString(I18n.format("container.inventory"), 8, this.ySize - 96 + 2, 4210752);

@@ -12,48 +12,32 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class OrganicRedstone extends Block
-{
-    public OrganicRedstone()
-    {
-        super(Material.rock);
-        this.setCreativeTab(Oreganic.oreganicTab);
-        this.setStepSound(soundTypeStone);
-        this.setHardness(3.0F);
-        this.setResistance(5.0F);
-        this.setHarvestLevel("pickaxe", 2);
-    }
+public class OrganicRedstone extends Block {
+	public OrganicRedstone() {
+		super(Material.rock);
+		this.setCreativeTab(Oreganic.oreganicTab);
+		this.setStepSound(soundTypeStone);
+		this.setHardness(3.0F);
+		this.setResistance(5.0F);
+		this.setHarvestLevel("pickaxe", 2);
+	}
 
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister) {
-    	this.blockIcon = iconRegister.registerIcon(Oreganic.modid + ":" + this.getUnlocalizedName().substring(5));
-    }
-    
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int side, int meta)
-    {
-        return blockIcon;
-    }
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister iconRegister) {
+		this.blockIcon = iconRegister.registerIcon(Oreganic.modid + ":"
+				+ this.getUnlocalizedName().substring(5));
+	}
 
-    public Item getItemDropped(int meta, Random random, int fortune)
-    {
-        return Item.getItemFromBlock(Oreganic.cropOrganicRedstone);
-    }
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int side, int meta) {
+		return blockIcon;
+	}
 
-    public int quantityDropped(Random random)
-    {
-        return 1;
-    }
+	public Item getItemDropped(int meta, Random random, int fortune) {
+		return Item.getItemFromBlock(Oreganic.cropOrganicRedstone);
+	}
 
-    public int quantityDroppedWithBonus(int fortune, Random random)
-    {
-        int j = this.quantityDropped(random) + random.nextInt(1 + fortune);
-
-        if (j > 9)
-        {
-            j = 9;
-        }
-
-        return j;
-    }
+	public int quantityDropped(Random random) {
+		return 1;
+	}
 }

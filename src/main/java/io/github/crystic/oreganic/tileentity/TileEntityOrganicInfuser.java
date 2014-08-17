@@ -31,6 +31,17 @@ public class TileEntityOrganicInfuser extends TileEntity implements ISidedInvent
 		slots = new ItemStack[4];
 	}
 
+	private static int getItemPower(ItemStack itemstack) {
+		if(itemstack == null) {
+			return 0;
+		} else {
+			Item item = itemstack.getItem();
+			if(item == Items.lava_bucket) return 204;
+			else if(item == Items.blaze_powder) return 65; 
+			else return 0;
+		}
+	}
+	
 	@Override
 	public int getSizeInventory() {
 
@@ -116,17 +127,6 @@ public class TileEntityOrganicInfuser extends TileEntity implements ISidedInvent
 	
 	public boolean hasItemPower(ItemStack itemstack) {
 		return getItemPower(itemstack) > 0;
-	}
-	
-	private static int getItemPower(ItemStack itemstack) {
-		if(itemstack == null) {
-			return 0;
-		} else {
-			Item item = itemstack.getItem();
-			if(item == Items.lava_bucket) return 204;
-			else if(item == Items.blaze_powder) return 32; 
-			else return 0;
-		}
 	}
 	
 	public void readFromNBT (NBTTagCompound nbt) {
@@ -327,6 +327,7 @@ public class TileEntityOrganicInfuser extends TileEntity implements ISidedInvent
 			if(item == Item.getItemFromBlock(Blocks.redstone_ore)) return 1;
 			if(item == Item.getItemFromBlock(Blocks.diamond_ore)) return 1;
 			if(item == Item.getItemFromBlock(Blocks.emerald_ore)) return 1;
+			if(item == Item.getItemFromBlock(Blocks.quartz_ore)) return 1;
 			else return 0;
 		}
 	}

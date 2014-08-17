@@ -12,8 +12,8 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class OrganicDiamond extends Block {
-	public OrganicDiamond() {
+public class OrganicQuartz extends Block {
+	public OrganicQuartz() {
 		super(Material.rock);
 		this.setCreativeTab(Oreganic.oreganicTab);
 		this.setStepSound(soundTypeStone);
@@ -34,7 +34,7 @@ public class OrganicDiamond extends Block {
 	}
 
 	public Item getItemDropped(int meta, Random random, int fortune) {
-		return Item.getItemFromBlock(Oreganic.cropOrganicDiamond);
+		return Item.getItemFromBlock(Oreganic.cropOrganicQuartz);
 	}
 
 	public int quantityDropped(Random random) {

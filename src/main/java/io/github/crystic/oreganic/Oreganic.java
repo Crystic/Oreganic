@@ -6,6 +6,7 @@ import io.github.crystic.oreganic.blocks.BlockEmeraldStem;
 import io.github.crystic.oreganic.blocks.BlockGoldStem;
 import io.github.crystic.oreganic.blocks.BlockIronStem;
 import io.github.crystic.oreganic.blocks.BlockLapisStem;
+import io.github.crystic.oreganic.blocks.BlockQuartzStem;
 import io.github.crystic.oreganic.blocks.BlockRedstoneStem;
 import io.github.crystic.oreganic.blocks.MineralExtractor;
 import io.github.crystic.oreganic.blocks.OrganicCoal;
@@ -15,8 +16,10 @@ import io.github.crystic.oreganic.blocks.OrganicGold;
 import io.github.crystic.oreganic.blocks.OrganicInfuser;
 import io.github.crystic.oreganic.blocks.OrganicIron;
 import io.github.crystic.oreganic.blocks.OrganicLapis;
+import io.github.crystic.oreganic.blocks.OrganicQuartz;
 import io.github.crystic.oreganic.blocks.OrganicRedstone;
 import io.github.crystic.oreganic.handler.GuiHandler;
+import io.github.crystic.oreganic.items.ItemQuartzSeeds;
 import io.github.crystic.oreganic.tileentity.TileEntityMineralExtractor;
 import io.github.crystic.oreganic.tileentity.TileEntityOrganicInfuser;
 import net.minecraft.block.Block;
@@ -38,8 +41,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Oreganic {
 
-	public static final String modid = "Oreganic";
-	public static final String version = "R1.0";
+	public static final String modid = "oreganic";
+	public static final String version = "R1.1";
 	
 	public static CreativeTabs oreganicTab;
 	@Instance(modid)
@@ -52,6 +55,7 @@ public class Oreganic {
 	public static Block cropRedstoneStem;
 	public static Block cropDiamondStem;
 	public static Block cropEmeraldStem;
+	public static Block cropQuartzStem;
 	
 	public static Block cropOrganicCoal;
 	public static Block cropOrganicIron;
@@ -60,11 +64,11 @@ public class Oreganic {
 	public static Block cropOrganicRedstone;
 	public static Block cropOrganicDiamond;
 	public static Block cropOrganicEmerald;
+	public static Block cropOrganicQuartz;
 	
 	public static Block blockOrganicInfuserIdle;
 	public static Block blockOrganicInfuserActive;
-	public static final int guiIdOrganicInfuser = 1;
-	
+	public static final int guiIdOrganicInfuser = 1;	
 	public static Block blockMineralExtractorIdle;
 	public static Block blockMineralExtractorActive;
 	public static final int guiIdMineralExtractor = 2;
@@ -76,16 +80,16 @@ public class Oreganic {
 	public static Item cropRedstoneSeeds;
 	public static Item cropDiamondSeeds;
 	public static Item cropEmeraldSeeds;
-			
+	public static Item cropQuartzSeeds;
+		
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent preEvent) {
-
 		oreganicTab = new CreativeTabs("OreGanic") {
 			public Item getTabIconItem() {
 				return Item.getItemFromBlock(cropOrganicCoal);
 			}
 		};
-		
+			
 		cropOrganicCoal = new OrganicCoal().setBlockName("OrganicCoal");
 		cropOrganicIron = new OrganicIron().setBlockName("OrganicIron");
 		cropOrganicGold = new OrganicGold().setBlockName("OrganicGold");
@@ -93,6 +97,7 @@ public class Oreganic {
 		cropOrganicRedstone = new OrganicRedstone().setBlockName("OrganicRedstone");
 		cropOrganicDiamond = new OrganicDiamond().setBlockName("OrganicDiamond");
 		cropOrganicEmerald = new OrganicEmerald().setBlockName("OrganicEmerald");
+		cropOrganicQuartz = new OrganicQuartz().setBlockName("OrganicQuartz");
 		
 		cropCoalStem = new BlockCoalStem(cropOrganicCoal).setBlockName("CoalStem");
 		cropIronStem = new BlockIronStem(cropOrganicIron).setBlockName("IronStem");
@@ -101,10 +106,10 @@ public class Oreganic {
 		cropRedstoneStem = new BlockRedstoneStem(cropOrganicRedstone).setBlockName("RedstoneStem");
 		cropDiamondStem = new BlockDiamondStem(cropOrganicDiamond).setBlockName("DiamondStem");
 		cropEmeraldStem = new BlockEmeraldStem(cropOrganicEmerald).setBlockName("EmeraldStem");
+		cropQuartzStem = new BlockQuartzStem(cropOrganicQuartz).setBlockName("QuartzStem");
 		
 		blockOrganicInfuserIdle = new OrganicInfuser(false).setBlockName("OrganicInfuserIdle").setCreativeTab(oreganicTab);
 		blockOrganicInfuserActive = new OrganicInfuser(true).setBlockName("OrganicInfuserActive").setLightLevel(0.5F);
-		
 		blockMineralExtractorIdle = new MineralExtractor(false).setBlockName("MineralExtractorIdle").setCreativeTab(oreganicTab);
 		blockMineralExtractorActive = new MineralExtractor(true).setBlockName("MineralExtractorActive").setLightLevel(0.5F);
 
@@ -115,7 +120,8 @@ public class Oreganic {
 		cropRedstoneSeeds = new ItemSeeds(cropRedstoneStem, Blocks.farmland).setUnlocalizedName("RedstoneSeeds").setTextureName(modid + ":RedstoneSeeds").setCreativeTab(oreganicTab);
 		cropDiamondSeeds = new ItemSeeds(cropDiamondStem, Blocks.farmland).setUnlocalizedName("DiamondSeeds").setTextureName(modid + ":DiamondSeeds").setCreativeTab(oreganicTab);
 		cropEmeraldSeeds = new ItemSeeds(cropEmeraldStem, Blocks.farmland).setUnlocalizedName("EmeraldSeeds").setTextureName(modid + ":EmeraldSeeds").setCreativeTab(oreganicTab);
-
+		cropQuartzSeeds = new ItemQuartzSeeds(cropQuartzStem, Blocks.soul_sand).setUnlocalizedName("QuartzSeeds").setTextureName(modid + ":QuartzSeeds").setCreativeTab(oreganicTab);
+	
 		GameRegistry.registerBlock(cropOrganicCoal, "OrganicCoal");
 		GameRegistry.registerBlock(cropOrganicIron, "OrganicIron");
 		GameRegistry.registerBlock(cropOrganicGold, "OrganicGold");
@@ -123,7 +129,8 @@ public class Oreganic {
 		GameRegistry.registerBlock(cropOrganicRedstone, "OrganicRedstone");
 		GameRegistry.registerBlock(cropOrganicDiamond, "OrganicDiamond");
 		GameRegistry.registerBlock(cropOrganicEmerald, "OrganicEmerald");
-		
+		GameRegistry.registerBlock(cropOrganicQuartz, "OrganicQuartz");
+
 		GameRegistry.registerBlock(cropCoalStem, "cropCoalStem");
 		GameRegistry.registerBlock(cropIronStem, "cropIronStem");
 		GameRegistry.registerBlock(cropGoldStem, "cropGoldStem");
@@ -131,10 +138,10 @@ public class Oreganic {
 		GameRegistry.registerBlock(cropRedstoneStem, "cropRedstoneStem");
 		GameRegistry.registerBlock(cropDiamondStem, "cropDiamondStem");
 		GameRegistry.registerBlock(cropEmeraldStem, "cropEmeraldStem");
+		GameRegistry.registerBlock(cropQuartzStem, "cropQuartzStem");
 		
 		GameRegistry.registerBlock(blockOrganicInfuserIdle, "OrganicInfuserIdle");
 		GameRegistry.registerBlock(blockOrganicInfuserActive, "OrganicInfuserActive");
-		
 		GameRegistry.registerBlock(blockMineralExtractorIdle, "MineralExtractorIdle");
 		GameRegistry.registerBlock(blockMineralExtractorActive, "MineralExtractorActive");
 		
@@ -145,6 +152,7 @@ public class Oreganic {
 		GameRegistry.registerItem(cropRedstoneSeeds, "RedstoneSeeds");
 		GameRegistry.registerItem(cropDiamondSeeds, "DiamondSeeds");
 		GameRegistry.registerItem(cropEmeraldSeeds, "EmeraldSeeds");
+		GameRegistry.registerItem(cropQuartzSeeds, "QuartzSeeds");		
 	}
 	
 	@EventHandler

@@ -12,6 +12,7 @@ tile.OrganicLapis.name=Organic Lapis Ore
 tile.OrganicRedstone.name=Organic Redstone Ore
 tile.OrganicDiamond.name=Organic Diamond Ore
 tile.OrganicEmerald.name=Organic Emerald Ore
+tile.OrganicQuartz.name=Organic Quartz Ore
 
 item.CoalSeeds.name=Coal Seeds
 item.IronSeeds.name=Iron Seeds
@@ -20,5 +21,4 @@ item.LapisSeeds.name=Lapis Seeds
 item.RedstoneSeeds.name=Redstone Seeds
 item.DiamondSeeds.name=Diamond Seeds
 item.EmeraldSeeds.name=Emerald Seeds
-
-container.organicInfuser=Organic Infuser
+item.QuartzSeeds.name=Quartz Seeds
