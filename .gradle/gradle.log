@@ -21,8 +21,6 @@ The assetDir is deprecated!  Use runDir instead! runDir set to ../run/assets/..T
 :extractNatives UP-TO-DATE
 :getAssetsIndex
 :getAssets
-Current status: 0/105   0%
-Current status: 72/105   68%
 :makeStart SKIPPED
 :compileTestJava UP-TO-DATE
 :processTestResources UP-TO-DATE
@@ -36,4 +34,4 @@ Current status: 72/105   68%
 
 BUILD SUCCESSFUL
 
-Total time: 49.207 secs
+Total time: 15.553 secs

@@ -18,8 +18,8 @@ buildscript {
 apply plugin: 'forge'
 
 version = "MC1.7.10 - R1.2"
-group= "io.github.crystic.oreganic" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "Oreganic"
+group= "io.github.crystic.oreganics" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "Oreganics"
 
 minecraft {
     version = "1.7.10-10.13.0.1180"
